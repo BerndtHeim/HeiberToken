@@ -1,0 +1,81 @@
+truffle console
+truffle console --network rinkeby
+truffle console -- network robsten
+
+web3.eth.getAccounts().then(function(accs) {accounts=accs})
+accounts
+admin=accounts[0]
+
+HeiberToken.deployed().then(function(instance) {heiberToken=instance})
+heiberToken
+
+HeiberTokenSale.deployed().then(function(instance) {heiberTokenSale=instance})
+heiberTokenSale
+
+heiberToken.balanceOf(admin).then(function(bal) {balance=bal})
+balance
+
+heiberToken.transfer(heiberTokenSale.address, 600000, {from: admin})
+
+heiberToken.balanceOf(admin).then(function(bal) {balance=bal})
+balance
+
+.exit
+
+
+"copied geth.exe to c:\windows\system32 as path too long"
+"couldn't get attach to work"
+//geth --rinkeby --rpc --rpcapi="personal,eth,network,web3,net" --ipcpath "c:\program files\geth\geth.ipc" console
+geth --rinkeby --rpc --rpcapi="personal,eth,network,web3,net" --syncmode "light"
+geth attach http://localhost:8545
+eth.syncing
+geth --rinkeby account new
+T*r (password!)
+{3c87d15a920266e84e78da80eed3befa30fa8847}
+[request ether using the faucet/facebook]
+eth.accounts
+eth.accounts[0]
+eth.getBalance(eth.accounts[0])
+personal.unlockAccount(eth.accounts[0], null, 1200)
+T*r (password!)
+var admin = eth.accounts[0]
+var tokensAvailable=600000
+var tokenSaleAddress='???'
+var abi = [???]
+var tokenAddress = '???'
+var TokenContract = web3.eth.contract(abi)
+var tokenInstance = TokenContract.at(tokenAddress)
+tokenInstance.name()
+tokenInstance.address
+tokenInstance.transfer(tokenSaleAddress, tokensAvailable, {from: admin})
+tokenInstance.balanceOf(admin)
+tokenInstance.balanceOf(tokenSaleAddress)
+import account json files into metamask from keystore directory
+
+truffle migrate --reset --compile-all --network rinkebyHeth
+
+truffle migrate --reset --compile-all --network rinkeby
+or
+truffle migrate --reset --compile-all --network ropsten
+
+//npm install --save truffle-hdwallet-provider@web3-one
+npm install --save truffle-hdwallet-provider
+
+git init
+git remote add origin https://github.com/BerndtHeim/HeiberToken.git 
+git push -u origin master
+https://berndtheim.github.io/HeiberToken/
+
+ipfs init
+ipfs daemon
+ipfs swarm peers
+ipfs add -r docs/
+ipfs name publish QmenyVygXqZU4Ze8waJSirW3cGGdbTnMupfruVzYDw9ZN2
+https://gateway.ipfs.io/ipfs/QmenyVygXqZU4Ze8waJSirW3cGGdbTnMupfruVzYDw9ZN2
+
+
+
+
+
+
+
