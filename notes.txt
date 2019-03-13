@@ -1,6 +1,19 @@
+//Infura setup
+//npm install --save truffle-hdwallet-provider@web3-one
+npm install --save truffle-hdwallet-provider
+
+
+//Migrate commands
+truffle migrate --reset
+truffle migrate --reset --compile-all --network rinkebyGeth
+truffle migrate --reset --compile-all --network rinkeby
+truffle migrate --reset --compile-all --network ropsten
+
+
+//Token sale initial transfer
 truffle console
 truffle console --network rinkeby
-truffle console -- network robsten
+truffle console --network ropsten
 
 web3.eth.getAccounts().then(function(accs) {accounts=accs})
 accounts
@@ -23,6 +36,8 @@ balance
 .exit
 
 
+
+// Geth process
 "copied geth.exe to c:\windows\system32 as path too long"
 "couldn't get attach to work"
 //geth --rinkeby --rpc --rpcapi="personal,eth,network,web3,net" --ipcpath "c:\program files\geth\geth.ipc" console
@@ -52,26 +67,14 @@ tokenInstance.balanceOf(admin)
 tokenInstance.balanceOf(tokenSaleAddress)
 import account json files into metamask from keystore directory
 
-truffle migrate --reset --compile-all --network rinkebyHeth
 
-truffle migrate --reset --compile-all --network rinkeby
-or
-truffle migrate --reset --compile-all --network ropsten
-
-//npm install --save truffle-hdwallet-provider@web3-one
-npm install --save truffle-hdwallet-provider
-
+// git/github setup
 git init
 git remote add origin https://github.com/BerndtHeim/HeiberToken.git 
 git push -u origin master
 https://berndtheim.github.io/HeiberToken/
 
-ipfs init
-ipfs daemon
-ipfs swarm peers
-ipfs add -r docs/
-ipfs name publish QmenyVygXqZU4Ze8waJSirW3cGGdbTnMupfruVzYDw9ZN2
-https://gateway.ipfs.io/ipfs/QmenyVygXqZU4Ze8waJSirW3cGGdbTnMupfruVzYDw9ZN2
+
 
 //to remove history of checkins in Github
 git checkout --orphan temp_branch
@@ -82,6 +85,14 @@ git branch -m master
 git push -f origin master
 
 
+
+//IPFS setup
+ipfs init
+ipfs daemon
+ipfs swarm peers
+ipfs add -r docs/
+ipfs name publish QmenyVygXqZU4Ze8waJSirW3cGGdbTnMupfruVzYDw9ZN2
+https://gateway.ipfs.io/ipfs/QmenyVygXqZU4Ze8waJSirW3cGGdbTnMupfruVzYDw9ZN2
 
 
 
