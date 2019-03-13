@@ -87,12 +87,12 @@ git push -f origin master
 
 
 //IPFS setup
-ipfs init
-ipfs daemon
-ipfs swarm peers
-ipfs add -r docs/
-ipfs name publish QmenyVygXqZU4Ze8waJSirW3cGGdbTnMupfruVzYDw9ZN2
-https://gateway.ipfs.io/ipfs/QmenyVygXqZU4Ze8waJSirW3cGGdbTnMupfruVzYDw9ZN2
+1. ipfs init
+1. ipfs daemon
+2. ipfs swarm peers
+2. ipfs add -r docs/
+2. ipfs name publish QmVAzv2XmhPCofyzWrGPZmikKgjePuV91B1XStXz6KmFYT
+https://gateway.ipfs.io/ipfs/QmVAzv2XmhPCofyzWrGPZmikKgjePuV91B1XStXz6KmFYT
 
 
 
