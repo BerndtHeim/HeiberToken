@@ -33,6 +33,8 @@ heiberToken.transfer(heiberTokenSale.address, 600000, {from: admin})
 heiberToken.balanceOf(admin).then(function(bal) {balance=bal})
 balance
 
+heiberTokenSale.endSale({from: admin})
+
 .exit
 
 
