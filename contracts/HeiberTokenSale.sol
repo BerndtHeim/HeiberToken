@@ -32,7 +32,7 @@ contract HeiberTokenSale {
 
     function endSale() public {
         require(msg.sender == admin, "must be an admin");
-        require(tokenContract.transfer(admin, tokenContract.balanceOf(address(this))), "transfer balance back to admin");
+        //require(tokenContract.transfer(admin, tokenContract.balanceOf(address(this))), "transfer balance back to admin");
 
         selfdestruct(msg.sender); // BH fix
     }
