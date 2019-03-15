@@ -3,7 +3,7 @@ pragma solidity ^0.5.0;
 import "./HeiberToken.sol";
 
 contract HeiberTokenSale {
-    address admin;
+    address payable admin;
     HeiberToken public tokenContract;
     uint256 public tokenPrice;
     uint256 public tokensSold;
@@ -34,6 +34,7 @@ contract HeiberTokenSale {
         require(msg.sender == admin, "must be an admin");
         require(tokenContract.transfer(admin, tokenContract.balanceOf(address(this))), "transfer balance back to admin");
 
-        selfdestruct(msg.sender); // BH fix
+        //selfdestruct(msg.sender); // BH fix
+        admin.transfer(address(this).balance);                
     }
 }
