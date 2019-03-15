@@ -73,9 +73,11 @@ contract('HeiberTokenSale', function(accounts) {
         }).then(function(balance) {
             // BH check figure below should be 999990
             assert.equal(balance.toNumber(), 749890, 'returns all unsole tokens to admin');
-            return tokenSaleInstance.tokenPrice();
-        }).then(function(price) {
+            balance = web3.eth.getBalance(tokenSaleInstance.address)
+            assert.equal(balance.toNumber(), 0);            
+            //return tokenSaleInstance.tokenPrice();
+        })//.then(function(price) {
             //assert.equal(price.toNumber(), 0, 'token price was reset'); //BH Fix
-        })
-    });    
+        //})
+    });        
 })
